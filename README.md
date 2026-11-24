@@ -2,7 +2,7 @@
 
 **EN** · [ES](#español)
 
-[![Live site](https://img.shields.io/badge/live-wolver--fik.github.io-6366F1?style=flat-square)](https://wolver-fik.github.io/)
+[![Live site](https://img.shields.io/badge/live-wolver-fik.github.io-6366F1?style=flat-square)](https://wolver-fik.github.io/)
 [![License](https://img.shields.io/badge/license-PolyForm%20Noncommercial%201.0.0-E0A96D?style=flat-square)](LICENSE)
 
 The official hub for the Wolver-Fik Progressive Web Apps: a dark editorial command center to discover, search and launch every app in the ecosystem. Everything runs in the browser — no servers, no accounts, no tracking.
