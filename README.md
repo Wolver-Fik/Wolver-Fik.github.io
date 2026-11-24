@@ -1,6 +1,6 @@
 # Wolver-Fik Suite
 
-[![GitHub Pages](./icons/badge-pages.svg)](https://github.io)
+[![GitHub Pages](./icons/badge-pages.svg)](https://wolver-fik.github.io/)
 
 [English](#english) · [Español](#español)
 
