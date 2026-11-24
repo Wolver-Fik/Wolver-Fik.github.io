@@ -1,6 +1,6 @@
 # Wolver-Fik Suite
 
-[![GitHub Pages](https://shields.ioGitHub%20Pages-Wolver%20Fik%20Suite-6366F1)](https://github.io)
+[![GitHub Pages](./icons/badge-pages.svg)](https://github.io)
 
 [English](#english) · [Español](#español)
 
