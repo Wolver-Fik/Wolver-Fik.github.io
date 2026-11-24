@@ -9,7 +9,7 @@
 ---
 <a id="english"></a>
 
-English
+**English**
 
 The official hub for the Wolver-Fik Progressive Web Apps: a dark editorial command center to discover, search and launch every app in the ecosystem. Everything runs in the browser — no servers, no accounts, no tracking.
 
@@ -59,7 +59,7 @@ Copyright (c) 2026 Wolver-Fik. Licensed under the [PolyForm Noncommercial Licens
 
 <a id="español"></a>
 
-Español
+**Español**
 
 Centro de mando oficial de las Progressive Web Apps de Wolver-Fik: una interfaz editorial oscura para buscar y abrir todas las aplicaciones del ecosistema. Todo funciona en el navegador: sin servidores, sin cuentas y sin rastreo.
 
