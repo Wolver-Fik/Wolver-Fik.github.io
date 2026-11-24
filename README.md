@@ -45,15 +45,6 @@ The official hub for the Wolver-Fik Progressive Web Apps: a dark editorial comma
 └── README.md
 ```
 
-## Local development
-
-```bash
-python -m http.server 8000
-# Visit http://localhost:8000
-```
-
-A local HTTP server is recommended so the service worker can register. Zero build steps and zero dependencies.
-
 ## License
 
 Copyright (c) 2026 Wolver-Fik. Licensed under the [PolyForm Noncommercial License 1.0.0](LICENSE). Noncommercial use only.
@@ -80,15 +71,6 @@ Centro de mando oficial de las Progressive Web Apps de Wolver-Fik: una interfaz 
 ## Estructura
 
 Igual que la descrita arriba: `index.html`, `css/`, `js/` (con `i18n/`), `icons/`, `manifest.webmanifest`, `sw.js`, `LICENSE` y este README.
-
-## Desarrollo local
-
-```bash
-python -m http.server 8000
-# Visita http://localhost:8000
-```
-
-Se recomienda un servidor HTTP local para que el service worker pueda registrarse. Sin compilación ni dependencias.
 
 ## Licencia
 
