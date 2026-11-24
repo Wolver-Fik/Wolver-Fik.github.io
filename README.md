@@ -1,10 +1,15 @@
 # Wolver-Fik Suite
 
-**EN** · [ES](#español)
+[![GitHub Pages](https://shields.io)](https://wolver-fik.github.io/)
 
-[![Live site](https://img.shields.io/badge/live-wolver-fik.github.io-6366F1?style=flat-square)](https://wolver-fik.github.io/)
+[English](#english) · [Español](#español)
 
 [![License](https://img.shields.io/badge/license-PolyForm%20Noncommercial%201.0.0-E0A96D?style=flat-square)](LICENSE)
+
+---
+<a id="english"></a>
+
+English
 
 The official hub for the Wolver-Fik Progressive Web Apps: a dark editorial command center to discover, search and launch every app in the ecosystem. Everything runs in the browser — no servers, no accounts, no tracking.
 
@@ -54,7 +59,7 @@ Copyright (c) 2026 Wolver-Fik. Licensed under the [PolyForm Noncommercial Licens
 
 <a id="español"></a>
 
-# Wolver-Fik Suite — Español
+Español
 
 Centro de mando oficial de las Progressive Web Apps de Wolver-Fik: una interfaz editorial oscura para buscar y abrir todas las aplicaciones del ecosistema. Todo funciona en el navegador: sin servidores, sin cuentas y sin rastreo.
 
