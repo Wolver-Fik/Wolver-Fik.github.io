@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="es" data-lang="es" id="top">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0B0D12">
+  <meta name="description" content="Wolver-Fik Suite — centro de mando de seis Progressive Web Apps offline-first, privadas y portátiles.">
+  <meta property="og:title" content="Wolver-Fik Suite">
+  <meta property="og:description" content="Offline-first PWA ecosystem. Sin servidores, sin cuentas, en 8 idiomas.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wolver-fik.github.io/">
+  <link rel="canonical" href="https://wolver-fik.github.io/">
+  <link rel="icon" href="./icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icons/icon-180.png">
+  <link rel="apple-mobile-web-app-capable" content="yes">
+  <link rel="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-mobile-web-app-title" content="WF Suite">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./css/styles.css">
+  <title>Wolver-Fik Suite — Offline-First PWA Ecosystem</title>
+</head>
+<body>
+  <a class="skip-link" href="#catalog" data-i18n="header.skip">Saltar al catálogo</a>
+  <div class="ambient" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="./" aria-label="Wolver-Fik Suite — inicio">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="wf-border" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#818CF8"/>
+                <stop offset="0.55" stop-color="#6366F1"/>
+                <stop offset="1" stop-color="#E0A96D"/>
+              </linearGradient>
+              <linearGradient id="wf-glyph" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#C7D2FE"/>
+                <stop offset="1" stop-color="#818CF8"/>
+              </linearGradient>
+              <filter id="wf-glow" x="-40%" y="-40%" width="180%" height="180%">
+                <feGaussianBlur stdDeviation="2.2" result="blur"/>
+                <feMerge>
+                  <feMergeNode in="blur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+            <rect x="2.5" y="2.5" width="59" height="59" rx="16" fill="#111524" stroke="url(#wf-border)" stroke-width="1.8"/>
+            <g fill="none" stroke="url(#wf-glyph)" stroke-width="4.4" stroke-linecap="square" stroke-linejoin="miter" filter="url(#wf-glow)">
+              <path d="M10.5 20.5 17.5 43 24.5 29 31.5 43 38.5 20.5"/>
+              <path d="M40.5 43V21h14M40.5 31.5h11"/>
+            </g>
+          </svg>
+        </span>
+        <span class="brand-copy">
+          <strong>Wolver-Fik Suite</strong>
+          <small>OFFLINE-FIRST PWA ECOSYSTEM</small>
+        </span>
+      </a>
+
+      <div class="lang-control">
+        <svg class="globe" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"></circle>
+          <path d="M3 12h18M12 3c2.5 2.5 3.8 5.6 3.8 9S14.5 18.5 12 21c-2.5-2.5-3.8-5.6-3.8-9S9.5 5.5 12 3Z"></path>
+        </svg>
+        <label class="sr-only" for="langSelect" data-i18n="header.language">Idioma</label>
+        <select id="langSelect" data-i18n-aria="header.language" aria-label="Idioma">
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="pt">Português</option>
+          <option value="fr">Français</option>
+          <option value="it">Italiano</option>
+          <option value="de">Deutsch</option>
+          <option value="ru">Русский</option>
+          <option value="ja">日本語</option>
+        </select>
+        <svg class="chevron" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="shell hero-inner">
+        <p class="eyebrow" data-i18n="hero.eyebrow">THE COMMAND CENTER</p>
+        <h1 id="heroTitle" data-i18n="hero.title">Tus apps, un solo ecosistema.</h1>
+        <p class="hero-lead" data-i18n="hero.lead">Seis aplicaciones offline-first, privadas y portátiles. Sin cuentas, sin servidores: tus datos viajan contigo.</p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#catalog">
+            <span data-i18n="hero.explore">Explorar aplicaciones</span>
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+          </a>
+          <a class="btn btn-ghost" href="https://github.com/Wolver-Fik" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2.2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.14-1.18 3.14-1.18.63 1.59.24 2.76.12 3.05.73.81 1.17 1.83 1.17 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"></path></svg>
+            <span data-i18n="hero.github">Ver perfil en GitHub</span>
+          </a>
+        </div>
+
+        <div class="pillars" aria-label="Pillars of the suite" data-i18n-aria="pillars.label">
+          <article class="pillar">
+            <span class="pillar-num">01</span>
+            <h2 data-i18n="pillars.offline.title">100% Offline-First</h2>
+            <p data-i18n="pillars.offline.text">Funcionan sin conexión. Tus datos viven en tu dispositivo.</p>
+          </article>
+          <article class="pillar">
+            <span class="pillar-num">02</span>
+            <h2 data-i18n="pillars.private.title">Sin servidores ni cuentas</h2>
+            <p data-i18n="pillars.private.text">Cero registros, cero rastreo. Tú controlas cada dato.</p>
+          </article>
+          <article class="pillar">
+            <span class="pillar-num">03</span>
+            <h2 data-i18n="pillars.language.title">8 idiomas</h2>
+            <p data-i18n="pillars.language.text">Interfaz traducida para trabajar siempre en tu idioma.</p>
+          </article>
+          <article class="pillar">
+            <span class="pillar-num">04</span>
+            <h2 data-i18n="pillars.portability.title">Portabilidad JSON / CSV</h2>
+            <p data-i18n="pillars.portability.text">Exporta e importa tu información cuando quieras.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog" id="catalog" aria-labelledby="catalogTitle">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow" data-i18n="catalog.eyebrow">THE CATALOG</p>
+            <h2 id="catalogTitle" data-i18n="catalog.title">Elige tu próxima herramienta</h2>
+            <p class="section-lead" data-i18n="catalog.subtitle">Seis aplicaciones pensadas para la vida real. Abre una, instálala y empieza a usarla al instante.</p>
+          </div>
+          <p class="counter" id="resultCount" role="status" aria-live="polite"></p>
+        </div>
+
+        <div class="toolbar">
+          <div class="search-box">
+            <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m16.5 16.5 4 4"></path></svg>
+            <label class="sr-only" for="searchInput" data-i18n="catalog.searchLabel">Buscar aplicaciones</label>
+            <input id="searchInput" type="search" autocomplete="off" spellcheck="false" data-i18n-placeholder="catalog.searchPlaceholder" placeholder="Buscar por nombre, función o categoría…">
+            <button class="clear-btn" id="clearSearch" type="button" hidden aria-label="Limpiar búsqueda" data-i18n-aria="catalog.clear">×</button>
+          </div>
+          <div class="filters" id="filters" role="group" aria-label="Filtrar por categoría" data-i18n-aria="catalog.filterLabel"></div>
+        </div>
+
+        <div class="app-grid" id="appGrid"></div>
+
+        <div class="empty-state" id="emptyState" hidden>
+          <div class="empty-glyph" aria-hidden="true">∅</div>
+          <h3 data-i18n="catalog.emptyTitle">Sin resultados</h3>
+          <p data-i18n="catalog.emptyText">Prueba con otro término o cambia la categoría.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div class="footer-brand">
+        <span class="footer-dot" aria-hidden="true"></span>
+        <div>
+          <strong data-i18n="footer.title">Wolver-Fik Suite</strong>
+          <p data-i18n="footer.text">Un ecosistema de PWAs privadas, rápidas y hechas para durar.</p>
+        </div>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="https://github.com/Wolver-Fik" target="_blank" rel="noopener noreferrer" data-i18n="footer.github">GitHub</a>
+        <a href="https://polyformproject.org/licenses/noncommercial/1.0.0" target="_blank" rel="noopener noreferrer">PolyForm NC 1.0.0</a>
+        <a href="#top" data-i18n="footer.top">Volver arriba ↑</a>
+      </nav>
+      <p class="footer-meta"><span data-i18n="footer.copy">© 2026 Wolver-Fik</span> · <span data-i18n="footer.license">Uso no comercial</span></p>
+    </div>
+  </footer>
+
+  <noscript>
+    <p class="noscript">Esta web necesita JavaScript para mostrar el catálogo y cambiar de idioma. / This site needs JavaScript to render the catalog and switch languages.</p>
+  </noscript>
+
+  <script src="./js/i18n/en.js"></script>
+  <script src="./js/i18n/es.js"></script>
+  <script src="./js/i18n/pt.js"></script>
+  <script src="./js/i18n/fr.js"></script>
+  <script src="./js/i18n/it.js"></script>
+  <script src="./js/i18n/de.js"></script>
+  <script src="./js/i18n/ru.js"></script>
+  <script src="./js/i18n/ja.js"></script>
+  <script src="./js/apps.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "id": "./",
+  "name": "Wolver-Fik Suite",
+  "short_name": "WF Suite",
+  "description": "Centro de mando offline-first de las Progressive Web Apps de Wolver-Fik.",
+  "lang": "es",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0B0D12",
+  "theme_color": "#6366F1",
+  "categories": ["productivity", "utilities", "health"],
+  "icons": [
+    { "src": "./icons/icon-180.png", "sizes": "180x180", "type": "image/png", "purpose": "any" },
+    { "src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "./icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    {
+      "name": "Catálogo de aplicaciones",
+      "short_name": "Apps",
+      "description": "Abrir directamente el catálogo de la suite.",
+      "url": "./#catalog",
+      "icons": [{ "src": "./icons/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    }
+  ]
+}
