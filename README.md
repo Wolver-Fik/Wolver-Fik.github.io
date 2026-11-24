@@ -1,10 +1,11 @@
 # Wolver-Fik Suite
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Wolver--Fik%20Suite-6366F1)](https://wolver-fik.github.io/)
+[![License](https://img.shields.io/badge/license-PolyForm%20Noncommercial%201.0.0-E0A96D?style=flat-square)](LICENSE)
 
 [English](#english) · [Español](#español)
 
-[![License](https://img.shields.io/badge/license-PolyForm%20Noncommercial%201.0.0-E0A96D?style=flat-square)](LICENSE)
+
 
 ---
 <a id="english"></a>
