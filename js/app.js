@@ -8,6 +8,7 @@
   var I18N = {};
   var APPS = [];
   var CATEGORIES = ['all'];
+  var IN_USE = {};
 
   var state = { lang: DEFAULT_LANG, category: 'all', query: '' };
   var els = {};
@@ -35,6 +36,50 @@
     return String(value).replace(/[&<>"']/g, function (char) {
       return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char];
     });
+  }
+
+  /* Detección de uso real. Solo comprobamos la existencia de las claves de
+   * datos y de las cachés PWA bajo este mismo origen. El contenido de los
+   * registros nunca se interpreta ni se escribe nada en las apps. */
+  function hasMeaningfulValue(raw) {
+    return !!raw && raw !== 'null' && raw !== '[]' && raw !== '{}';
+  }
+
+  function detectStoredUsage() {
+    var found = {};
+
+    APPS.forEach(function (app) {
+      found[app.id] = false;
+      var keys = Array.isArray(app.storageKeys) ? app.storageKeys : [];
+      for (var i = 0; i < keys.length; i += 1) {
+        try {
+          if (hasMeaningfulValue(global.localStorage.getItem(keys[i]))) {
+            found[app.id] = true;
+            break;
+          }
+        } catch (err) { /* almacenamiento bloqueado */ }
+      }
+    });
+
+    return found;
+  }
+
+  function detectCachedUsage(found, done) {
+    if (!global.caches || typeof global.caches.keys !== 'function') {
+      done();
+      return;
+    }
+
+    global.caches.keys().then(function (keys) {
+      APPS.forEach(function (app) {
+        if (found[app.id]) return;
+        var prefixes = Array.isArray(app.cachePrefixes) ? app.cachePrefixes : [];
+        found[app.id] = keys.some(function (name) {
+          return prefixes.some(function (prefix) { return name.indexOf(prefix) === 0; });
+        });
+      });
+      done();
+    }).catch(function () { done(); });
   }
 
   function readStoredLang() {
@@ -99,7 +144,8 @@
   function buildFilters() {
     els.filters.innerHTML = CATEGORIES.map(function (key) {
       var active = key === state.category;
-      return '<button type="button" class="chip' + (active ? ' is-active' : '') + '"' +
+      var extraClass = key === 'inUse' ? ' chip-use' : '';
+      return '<button type="button" class="chip' + extraClass + (active ? ' is-active' : '') + '"' +
         ' data-category="' + escapeHTML(key) + '" aria-pressed="' + active + '"' +
         ' data-i18n="filter.' + escapeHTML(key) + '">' + escapeHTML(t('filter.' + key)) + '</button>';
     }).join('');
@@ -110,14 +156,28 @@
     var tags = app.tags.map(function (key) {
       return '<li>' + escapeHTML(t(key)) + '</li>';
     }).join('');
+    var status = t('status.' + app.status);
+    var badges = '<span class="version-badge">' +
+      escapeHTML(app.version) + ' · ' + escapeHTML(status) + '</span>';
+
+    if (IN_USE[app.id]) {
+      badges += '<span class="in-use-badge">' +
+        '<span class="use-dot" aria-hidden="true"></span>' + escapeHTML(t('card.inUse')) +
+        '</span>';
+    }
 
     return '<article class="app-card" style="--accent:' + escapeHTML(app.accent) + '">' +
       '<div class="card-top">' +
         '<span class="icon-tile">' + app.icon + '</span>' +
         '<span class="category-pill">' + escapeHTML(t('filter.' + app.category)) + '</span>' +
       '</div>' +
+      '<div class="status-row">' + badges + '</div>' +
       '<h3>' + escapeHTML(app.name) + '</h3>' +
       '<p class="app-desc">' + escapeHTML(desc) + '</p>' +
+      '<p class="independent-note">' +
+        '<span class="independent-dot" aria-hidden="true"></span>' +
+        escapeHTML(t('card.independent')) +
+      '</p>' +
       '<ul class="tag-list">' + tags + '</ul>' +
       '<div class="card-actions">' +
         '<a class="card-link link-open" href="' + escapeHTML(app.url) + '" target="_blank" rel="noopener noreferrer">' +
@@ -147,7 +207,11 @@
     var query = normalize(state.query);
 
     var visible = APPS.filter(function (app) {
-      if (state.category !== 'all' && app.category !== state.category) return false;
+      if (state.category === 'inUse') {
+        if (!IN_USE[app.id]) return false;
+      } else if (state.category !== 'all' && app.category !== state.category) {
+        return false;
+      }
       if (!query) return true;
 
       var haystack = [
@@ -179,6 +243,29 @@
     render();
   }
 
+  function openGuide() {
+    if (!els.guideDialog) return;
+    if (typeof els.guideDialog.showModal === 'function') {
+      els.guideDialog.showModal();
+    } else {
+      els.guideDialog.setAttribute('open', '');
+    }
+  }
+
+  function closeGuide() {
+    if (!els.guideDialog) return;
+    if (typeof els.guideDialog.close === 'function') {
+      els.guideDialog.close();
+    } else {
+      els.guideDialog.removeAttribute('open');
+    }
+  }
+
+  function refreshUsage() {
+    IN_USE = detectStoredUsage();
+    detectCachedUsage(IN_USE, render);
+  }
+
   function init() {
     els.langSelect = document.getElementById('langSelect');
     els.search = document.getElementById('searchInput');
@@ -187,11 +274,16 @@
     els.grid = document.getElementById('appGrid');
     els.empty = document.getElementById('emptyState');
     els.count = document.getElementById('resultCount');
+    els.guideTrigger = document.getElementById('guideTrigger');
+    els.guideDialog = document.getElementById('guideDialog');
+    els.guideClose = document.getElementById('guideClose');
+    els.guideDone = document.getElementById('guideDone');
 
     if (!els.langSelect || !els.search || !els.clear || !els.filters || !els.grid || !els.empty || !els.count) return;
 
     refreshData();
     state.lang = detectLang();
+    IN_USE = detectStoredUsage();
 
     els.langSelect.addEventListener('change', function (event) {
       setLang(event.target.value);
@@ -223,9 +315,24 @@
       render();
     });
 
+    if (els.guideTrigger) els.guideTrigger.addEventListener('click', openGuide);
+    if (els.guideClose) els.guideClose.addEventListener('click', closeGuide);
+    if (els.guideDone) els.guideDone.addEventListener('click', closeGuide);
+    if (els.guideDialog) {
+      els.guideDialog.addEventListener('click', function (event) {
+        if (event.target === els.guideDialog) closeGuide();
+      });
+    }
+
     applyTranslations();
     buildFilters();
     render();
+    detectCachedUsage(IN_USE, render);
+
+    // Al volver desde una app (bfcache) las cachés pueden haber cambiado.
+    global.addEventListener('pageshow', function (event) {
+      if (event.persisted) refreshUsage();
+    });
 
     if ('serviceWorker' in navigator && location.protocol !== 'file:') {
       global.addEventListener('load', function () {

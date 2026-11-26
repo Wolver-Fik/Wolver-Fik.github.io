@@ -1,6 +1,5 @@
 /* Wolver-Fik Suite — Russian (ru) UI strings.
- * Todas las claves están alineadas con js/i18n/en.js (67 claves).
- * Nota: se añadieron 24 claves para las nuevas funciones (91 en total).
+ * Todas las claves están alineadas con js/i18n/en.js (109 claves).
  */
 (function (global) {
   'use strict';
@@ -98,6 +97,23 @@
     "apps.studyflow.tag4": "Карточки",
     "apps.studyflow.tag5": "Интервальное повторение",
     "apps.studyflow.tag6": "Восстановление сессий",
-    "apps.studyflow.tag7": "Подготовка к экзаменам"
+    "apps.studyflow.tag7": "Подготовка к экзаменам",
+    "status.active": "Активно",
+    "card.independent": "Независимое PWA · работает без портала",
+    "card.inUse": "Используется на этом устройстве",
+    "filter.inUse": "Используемые",
+    "guide.button": "Резервное копирование и восстановление",
+    "guide.buttonAria": "Открыть руководство по резервному копированию и восстановлению",
+    "guide.eyebrow": "ПЕРЕНОСИМОСТЬ",
+    "guide.title": "Резервное копирование и восстановление",
+    "guide.lead": "Каждое приложение хранит данные отдельно. Экспортируйте JSON-копию из каждого перед сменой устройства или очисткой данных сайта.",
+    "guide.step1.title": "Откройте приложение и зайдите в настройки",
+    "guide.step1.text": "Нажмите «Открыть приложение» на его карточке и найдите раздел «Настройки» → «Резервная копия».",
+    "guide.step2.title": "Экспортируйте JSON",
+    "guide.step2.text": "Используйте «Экспорт резервной копии», «Export JSON» или «Создать и скопировать JSON». Сохраните файл или скопируйте текст в надёжное место.",
+    "guide.step3.title": "Восстановите на новом устройстве",
+    "guide.step3.text": "Откройте то же приложение, выберите «Импорт резервной копии» или «Восстановить из JSON», затем выберите файл или вставьте текст. Повторите для каждого приложения.",
+    "guide.note": "Копии независимы: JSON одного приложения не восстановит остальные.",
+    "guide.close": "Понятно"
   };
 })(window);

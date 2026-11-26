@@ -1,6 +1,5 @@
 /* Wolver-Fik Suite — Portuguese (pt) UI strings.
- * Todas las claves están alineadas con js/i18n/en.js (67 claves).
- * Nota: se añadieron 24 claves para las nuevas funciones (91 en total).
+ * Todas las claves están alineadas con js/i18n/en.js (109 claves).
  */
 (function (global) {
   'use strict';
@@ -98,6 +97,23 @@
     "apps.studyflow.tag4": "Flashcards",
     "apps.studyflow.tag5": "Repetição espaçada",
     "apps.studyflow.tag6": "Recuperação de sessões",
-    "apps.studyflow.tag7": "Preparação para provas"
+    "apps.studyflow.tag7": "Preparação para provas",
+    "status.active": "Ativa",
+    "card.independent": "PWA independente · funciona sem o portal",
+    "card.inUse": "Em uso neste dispositivo",
+    "filter.inUse": "Em uso",
+    "guide.button": "Guia de backup e restauração",
+    "guide.buttonAria": "Abrir guia de backup e restauração",
+    "guide.eyebrow": "PORTABILIDADE",
+    "guide.title": "Guia de backup e restauração",
+    "guide.lead": "Cada app guarda seus dados separadamente. Exporte um backup JSON de cada uma antes de trocar de dispositivo ou apagar os dados do site.",
+    "guide.step1.title": "Abra o app e entre em Ajustes",
+    "guide.step1.text": "Toque em «Abrir app» no cartão correspondente e procure Ajustes → Backup (ou Cópia de segurança).",
+    "guide.step2.title": "Exporte o JSON",
+    "guide.step2.text": "Use «Exportar backup», «Export JSON» ou «Gerar e copiar JSON». Salve o arquivo ou copie o texto para um lugar seguro.",
+    "guide.step3.title": "Restaure no novo dispositivo",
+    "guide.step3.text": "Abra o mesmo app, escolha «Importar backup» ou «Restaurar do JSON» e selecione o arquivo ou cole o texto. Repita o processo em cada app.",
+    "guide.note": "Os backups são independentes: o JSON de um app não restaura os demais.",
+    "guide.close": "Entendi"
   };
 })(window);

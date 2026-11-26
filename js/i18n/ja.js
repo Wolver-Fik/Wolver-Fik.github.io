@@ -1,6 +1,5 @@
 /* Wolver-Fik Suite — Japanese (ja) UI strings.
- * Todas las claves están alineadas con js/i18n/en.js (67 claves).
- * Nota: se añadieron 24 claves para las nuevas funciones (91 en total).
+ * Todas las claves están alineadas con js/i18n/en.js (109 claves).
  */
 (function (global) {
   'use strict';
@@ -98,6 +97,23 @@
     "apps.studyflow.tag4": "フラッシュカード",
     "apps.studyflow.tag5": "間隔反復",
     "apps.studyflow.tag6": "セッション復元",
-    "apps.studyflow.tag7": "試験準備"
+    "apps.studyflow.tag7": "試験準備",
+    "status.active": "有効",
+    "card.independent": "独立したPWA · ポータルなしで動作",
+    "card.inUse": "このデバイスで使用中",
+    "filter.inUse": "使用中",
+    "guide.button": "バックアップと復元のガイド",
+    "guide.buttonAria": "バックアップと復元のガイドを開く",
+    "guide.eyebrow": "ポータビリティ",
+    "guide.title": "バックアップと復元",
+    "guide.lead": "各アプリはデータを個別に保存します。端末を替えたりサイトのデータを消す前に、それぞれからJSONバックアップを書き出してください。",
+    "guide.step1.title": "アプリを開いて設定へ",
+    "guide.step1.text": "カードの「アプリを開く」を押し、「設定」→「バックアップ」を探してください。",
+    "guide.step2.title": "JSONを書き出す",
+    "guide.step2.text": "「バックアップをエクスポート」「Export JSON」「JSONを生成してコピー」などを使用します。ファイルやテキストを安全な場所に保存してください。",
+    "guide.step3.title": "新しい端末で復元する",
+    "guide.step3.text": "同じアプリを開き、「バックアップをインポート」または「JSONから復元」を選んでファイルを指定するかテキストを貼り付けます。アプリごとに繰り返してください。",
+    "guide.note": "バックアップは独立しています。あるアプリのJSONでは他のアプリは復元できません。",
+    "guide.close": "了解"
   };
 })(window);

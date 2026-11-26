@@ -1,5 +1,5 @@
 /* Wolver-Fik Suite — service worker del portal hub. */
-const CACHE = 'wf-suite-v1.0.4';
+const CACHE = 'wf-suite-v1.1.0';
 
 const CORE_ASSETS = [
   './',
@@ -22,6 +22,19 @@ const CORE_ASSETS = [
   './icons/icon-512.png'
 ];
 
+const SCOPE = self.registration.scope;
+const HUB_ROOT = new URL('./', SCOPE).href;
+const HUB_INDEX = new URL('./index.html', SCOPE).href;
+const HUB_URLS = new Set(CORE_ASSETS.map((path) => new URL(path, SCOPE).href));
+
+/* El hub y las seis PWA comparten origen, pero no caché. Solo gestionamos los
+ * archivos del portal: las rutas /PulseFit/, /ClearWallet/, etc. las atiende
+ * el service worker de cada aplicación. */
+function hubTarget(url) {
+  const target = new URL(url.pathname, SCOPE).href;
+  return HUB_URLS.has(target) ? target : null;
+}
+
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE)
@@ -34,7 +47,9 @@ self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys()
       .then((keys) => Promise.all(
-        keys.filter((key) => key !== CACHE).map((key) => caches.delete(key))
+        keys
+          .filter((key) => key.indexOf('wf-suite-') === 0 && key !== CACHE)
+          .map((key) => caches.delete(key))
       ))
       .then(() => self.clients.claim())
   );
@@ -47,32 +62,44 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return;
 
-  // HTML: Network-First, con la página del hub como respaldo offline.
-  if (request.mode === 'navigate' || (request.headers.get('accept') || '').includes('text/html')) {
+  const target = hubTarget(url);
+  if (!target) return;
+
+  const isHTML = request.mode === 'navigate' ||
+    target === HUB_ROOT ||
+    target === HUB_INDEX ||
+    (request.headers.get('accept') || '').includes('text/html');
+
+  // HTML del hub: Network-First, con la página del portal como respaldo offline.
+  if (isHTML) {
     event.respondWith(
       fetch(request)
         .then((response) => {
           if (response.ok) {
             const copy = response.clone();
-            caches.open(CACHE).then((cache) => cache.put('./index.html', copy));
+            caches.open(CACHE)
+              .then((cache) => cache.put(target, copy))
+              .catch(() => {});
           }
           return response;
         })
-        .catch(() => caches.match('./index.html').then((cached) => cached || Response.error()))
+        .catch(() => caches.open(CACHE).then((cache) =>
+          cache.match(HUB_INDEX).then((cached) => cached || cache.match(HUB_ROOT))
+        ).then((cached) => cached || Response.error()))
     );
     return;
   }
 
-  // Recursos estáticos: Cache-First CON revalidación real en segundo plano.
-  // Antes se devolvía la copia cacheada sin volver a pedirla: un CSS o JS
-  // corregido nunca se actualizaba hasta cambiar el nombre del caché.
+  // Recursos estáticos del hub: Cache-First con revalidación en segundo plano.
   event.respondWith(
-    caches.match(request).then((cached) => {
+    caches.open(CACHE).then((cache) => cache.match(target)).then((cached) => {
       const network = fetch(request)
         .then((response) => {
           if (response.ok) {
             const copy = response.clone();
-            caches.open(CACHE).then((cache) => cache.put(request, copy)).catch(() => {});
+            caches.open(CACHE)
+              .then((store) => store.put(target, copy))
+              .catch(() => {});
           }
           return response;
         })

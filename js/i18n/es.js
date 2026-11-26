@@ -1,6 +1,5 @@
 /* Wolver-Fik Suite — Spanish (es) UI strings.
- * Todas las claves están alineadas con js/i18n/en.js (67 claves).
- * Nota: se añadieron 24 claves para las nuevas funciones (91 en total).
+ * Todas las claves están alineadas con js/i18n/en.js (109 claves).
  */
 (function (global) {
   'use strict';
@@ -98,6 +97,23 @@
     "apps.studyflow.tag4": "Flashcards",
     "apps.studyflow.tag5": "Repetición espaciada",
     "apps.studyflow.tag6": "Recuperación de sesiones",
-    "apps.studyflow.tag7": "Preparación de exámenes"
+    "apps.studyflow.tag7": "Preparación de exámenes",
+    "status.active": "Activa",
+    "card.independent": "PWA independiente · funciona sin el portal",
+    "card.inUse": "En uso en este dispositivo",
+    "filter.inUse": "En uso",
+    "guide.button": "Guía de respaldo y restauración",
+    "guide.buttonAria": "Abrir la guía de respaldo y restauración",
+    "guide.eyebrow": "PORTABILIDAD",
+    "guide.title": "Guía de respaldo y restauración",
+    "guide.lead": "Cada app guarda sus datos por separado. Exporta un respaldo JSON en cada una antes de cambiar de dispositivo o borrar los datos del sitio.",
+    "guide.step1.title": "Abre la app y entra en Ajustes",
+    "guide.step1.text": "Pulsa «Abrir app» en su tarjeta y busca Ajustes → Respaldo (o Copia de seguridad).",
+    "guide.step2.title": "Exporta el JSON",
+    "guide.step2.text": "Usa «Exportar respaldo», «Export JSON» o «Generar y copiar JSON». Guarda el archivo o copia el texto en un lugar seguro.",
+    "guide.step3.title": "Restaura en el nuevo dispositivo",
+    "guide.step3.text": "Abre la misma app, elige «Importar respaldo» o «Restaurar desde JSON» y selecciona el archivo o pega el texto. Repite el proceso con cada app.",
+    "guide.note": "Los respaldos son independientes: un JSON de una app no restaura las demás.",
+    "guide.close": "Entendido"
   };
 })(window);

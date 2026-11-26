@@ -1,6 +1,5 @@
 /* Wolver-Fik Suite — German (de) UI strings.
- * Todas las claves están alineadas con js/i18n/en.js (67 claves).
- * Nota: se añadieron 24 claves para las nuevas funciones (91 en total).
+ * Todas las claves están alineadas con js/i18n/en.js (109 claves).
  */
 (function (global) {
   'use strict';
@@ -98,6 +97,23 @@
     "apps.studyflow.tag4": "Karteikarten",
     "apps.studyflow.tag5": "Spaced Repetition",
     "apps.studyflow.tag6": "Sitzungswiederherstellung",
-    "apps.studyflow.tag7": "Prüfungsvorbereitung"
+    "apps.studyflow.tag7": "Prüfungsvorbereitung",
+    "status.active": "Aktiv",
+    "card.independent": "Unabhängige PWA · funktioniert ohne das Portal",
+    "card.inUse": "Auf diesem Gerät verwendet",
+    "filter.inUse": "In Verwendung",
+    "guide.button": "Sicherung & Wiederherstellung",
+    "guide.buttonAria": "Anleitung zu Sicherung und Wiederherstellung öffnen",
+    "guide.eyebrow": "PORTABILITÄT",
+    "guide.title": "Sicherung & Wiederherstellung",
+    "guide.lead": "Jede App speichert ihre Daten getrennt. Exportiere vor einem Gerätewechsel oder dem Löschen der Websitedaten aus jeder App eine JSON-Sicherung.",
+    "guide.step1.title": "App öffnen und zu Einstellungen gehen",
+    "guide.step1.text": "Klicke auf der Karte auf „App öffnen“ und suche Einstellungen → Sicherung (bzw. Datensicherung).",
+    "guide.step2.title": "JSON exportieren",
+    "guide.step2.text": "Nutze „Backup exportieren“, „Export JSON“ oder „JSON erstellen und kopieren“. Speichere die Datei oder kopiere den Text an einen sicheren Ort.",
+    "guide.step3.title": "Auf dem neuen Gerät wiederherstellen",
+    "guide.step3.text": "Öffne dieselbe App, wähle „Backup importieren“ oder „Aus JSON wiederherstellen“ und wähle die Datei aus oder füge den Text ein. Wiederhole dies für jede App.",
+    "guide.note": "Sicherungen sind unabhängig: eine JSON-Datei einer App stellt die anderen nicht wieder her.",
+    "guide.close": "Verstanden"
   };
 })(window);

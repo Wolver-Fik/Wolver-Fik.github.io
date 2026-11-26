@@ -50,13 +50,20 @@
     )
   };
 
-  global.WF_CATEGORIES = ['all', 'health', 'finance', 'leisure', 'productivity'];
+  global.WF_CATEGORIES = ['all', 'health', 'finance', 'leisure', 'productivity', 'inUse'];
 
+  /* Las versiones son las que declara el service worker de cada PWA. Las claves
+   * de almacenamiento y los prefijos de caché sirven SOLO para detectar uso en
+   * este dispositivo: el portal nunca lee ni modifica los datos de las apps. */
   global.WF_APPS = [
     {
       id: 'pulsefit',
       name: 'PulseFit',
       category: 'health',
+      version: 'v25',
+      status: 'active',
+      storageKeys: ['cf_days', 'cf_lifts', 'pulsefit_weekly_plan', 'pulsefit_body_measures'],
+      cachePrefixes: ['pulsefit-v'],
       accent: '#FF7A7A',
       icon: ICONS.pulsefit,
       tags: ['apps.pulsefit.tag1', 'apps.pulsefit.tag2', 'apps.pulsefit.tag3', 'apps.pulsefit.tag4', 'apps.pulsefit.tag5', 'apps.pulsefit.tag6', 'apps.pulsefit.tag7'],
@@ -67,6 +74,10 @@
       id: 'clearwallet',
       name: 'ClearWallet',
       category: 'finance',
+      version: 'v1.3.1',
+      status: 'active',
+      storageKeys: ['clearwallet-v1', 'plata-al-dia-v1'],
+      cachePrefixes: ['clearwallet-v'],
       accent: '#34D399',
       icon: ICONS.clearwallet,
       tags: ['apps.clearwallet.tag1', 'apps.clearwallet.tag2', 'apps.clearwallet.tag3', 'apps.clearwallet.tag4', 'apps.clearwallet.tag5', 'apps.clearwallet.tag6', 'apps.clearwallet.tag7'],
@@ -77,6 +88,10 @@
       id: 'autocare',
       name: 'AutoCare',
       category: 'finance',
+      version: 'v1.3.8',
+      status: 'active',
+      storageKeys: ['tablero-auto-v1'],
+      cachePrefixes: ['autocare-v'],
       accent: '#E0A96D',
       icon: ICONS.autocare,
       tags: ['apps.autocare.tag1', 'apps.autocare.tag2', 'apps.autocare.tag3', 'apps.autocare.tag4', 'apps.autocare.tag5', 'apps.autocare.tag6', 'apps.autocare.tag7', 'apps.autocare.tag8'],
@@ -87,6 +102,10 @@
       id: 'gamevault',
       name: 'GameVault',
       category: 'leisure',
+      version: 'v1.3.5',
+      status: 'active',
+      storageKeys: ['biblioteca-juegos-v1', 'gamevault-owned-platforms-v1', 'gamevault-collections-v1'],
+      cachePrefixes: ['gamevault-v'],
       accent: '#A78BFA',
       icon: ICONS.gamevault,
       tags: ['apps.gamevault.tag1', 'apps.gamevault.tag2', 'apps.gamevault.tag3', 'apps.gamevault.tag4', 'apps.gamevault.tag5', 'apps.gamevault.tag6', 'apps.gamevault.tag7'],
@@ -97,6 +116,10 @@
       id: 'sleeptrack',
       name: 'SleepTrack',
       category: 'health',
+      version: 'v6',
+      status: 'active',
+      storageKeys: ['diario-sueno-v1'],
+      cachePrefixes: ['sleeptrack-v'],
       accent: '#60A5FA',
       icon: ICONS.sleeptrack,
       tags: ['apps.sleeptrack.tag1', 'apps.sleeptrack.tag2', 'apps.sleeptrack.tag3', 'apps.sleeptrack.tag4', 'apps.sleeptrack.tag5', 'apps.sleeptrack.tag6', 'apps.sleeptrack.tag7'],
@@ -107,6 +130,10 @@
       id: 'studyflow',
       name: 'StudyFlow',
       category: 'productivity',
+      version: 'v1.1.2',
+      status: 'active',
+      storageKeys: ['studyflow-v1', 'panel-estudio-v1'],
+      cachePrefixes: ['studyflow-v'],
       accent: '#2DD4BF',
       icon: ICONS.studyflow,
       tags: ['apps.studyflow.tag1', 'apps.studyflow.tag2', 'apps.studyflow.tag3', 'apps.studyflow.tag4', 'apps.studyflow.tag5', 'apps.studyflow.tag6', 'apps.studyflow.tag7'],

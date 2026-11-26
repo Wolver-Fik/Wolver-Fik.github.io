@@ -1,6 +1,5 @@
 /* Wolver-Fik Suite — French (fr) UI strings.
- * Todas las claves están alineadas con js/i18n/en.js (67 claves).
- * Nota: se añadieron 24 claves para las nuevas funciones (91 en total).
+ * Todas las claves están alineadas con js/i18n/en.js (109 claves).
  */
 (function (global) {
   'use strict';
@@ -98,6 +97,23 @@
     "apps.studyflow.tag4": "Cartes mémoire",
     "apps.studyflow.tag5": "Répétition espacée",
     "apps.studyflow.tag6": "Récupération sessions",
-    "apps.studyflow.tag7": "Préparation aux examens"
+    "apps.studyflow.tag7": "Préparation aux examens",
+    "status.active": "Active",
+    "card.independent": "PWA autonome · fonctionne sans le portail",
+    "card.inUse": "Utilisée sur cet appareil",
+    "filter.inUse": "En usage",
+    "guide.button": "Guide de sauvegarde et restauration",
+    "guide.buttonAria": "Ouvrir le guide de sauvegarde et restauration",
+    "guide.eyebrow": "PORTABILITÉ",
+    "guide.title": "Sauvegarde et restauration",
+    "guide.lead": "Chaque app conserve ses données séparément. Exportez une sauvegarde JSON de chacune avant de changer d’appareil ou d’effacer les données du site.",
+    "guide.step1.title": "Ouvrez l’app et allez dans Réglages",
+    "guide.step1.text": "Cliquez sur « Ouvrir l’app » sur sa carte, puis cherchez Réglages → Sauvegarde.",
+    "guide.step2.title": "Exportez le JSON",
+    "guide.step2.text": "Utilisez « Exporter la sauvegarde », « Export JSON » ou « Générer et copier le JSON ». Enregistrez le fichier ou copiez le texte en lieu sûr.",
+    "guide.step3.title": "Restaurez sur le nouvel appareil",
+    "guide.step3.text": "Ouvrez la même app, choisissez « Importer la sauvegarde » ou « Restaurer depuis le JSON », puis sélectionnez le fichier ou collez le texte. Répétez pour chaque app.",
+    "guide.note": "Les sauvegardes sont indépendantes : le JSON d’une app ne restaure pas les autres.",
+    "guide.close": "Compris"
   };
 })(window);
