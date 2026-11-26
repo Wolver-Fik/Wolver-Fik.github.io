@@ -59,7 +59,7 @@
       category: 'health',
       accent: '#FF7A7A',
       icon: ICONS.pulsefit,
-      tags: ['apps.pulsefit.tag1', 'apps.pulsefit.tag2', 'apps.pulsefit.tag3'],
+      tags: ['apps.pulsefit.tag1', 'apps.pulsefit.tag2', 'apps.pulsefit.tag3', 'apps.pulsefit.tag4', 'apps.pulsefit.tag5', 'apps.pulsefit.tag6', 'apps.pulsefit.tag7'],
       url: 'https://wolver-fik.github.io/PulseFit/',
       source: 'https://github.com/Wolver-Fik/PulseFit'
     },
@@ -69,7 +69,7 @@
       category: 'finance',
       accent: '#34D399',
       icon: ICONS.clearwallet,
-      tags: ['apps.clearwallet.tag1', 'apps.clearwallet.tag2', 'apps.clearwallet.tag3'],
+      tags: ['apps.clearwallet.tag1', 'apps.clearwallet.tag2', 'apps.clearwallet.tag3', 'apps.clearwallet.tag4', 'apps.clearwallet.tag5', 'apps.clearwallet.tag6', 'apps.clearwallet.tag7'],
       url: 'https://wolver-fik.github.io/ClearWallet/',
       source: 'https://github.com/Wolver-Fik/ClearWallet'
     },
@@ -79,7 +79,7 @@
       category: 'finance',
       accent: '#E0A96D',
       icon: ICONS.autocare,
-      tags: ['apps.autocare.tag1', 'apps.autocare.tag2', 'apps.autocare.tag3'],
+      tags: ['apps.autocare.tag1', 'apps.autocare.tag2', 'apps.autocare.tag3', 'apps.autocare.tag4', 'apps.autocare.tag5', 'apps.autocare.tag6', 'apps.autocare.tag7', 'apps.autocare.tag8'],
       url: 'https://wolver-fik.github.io/AutoCare/',
       source: 'https://github.com/Wolver-Fik/AutoCare'
     },
@@ -89,7 +89,7 @@
       category: 'leisure',
       accent: '#A78BFA',
       icon: ICONS.gamevault,
-      tags: ['apps.gamevault.tag1', 'apps.gamevault.tag2', 'apps.gamevault.tag3'],
+      tags: ['apps.gamevault.tag1', 'apps.gamevault.tag2', 'apps.gamevault.tag3', 'apps.gamevault.tag4', 'apps.gamevault.tag5', 'apps.gamevault.tag6', 'apps.gamevault.tag7'],
       url: 'https://wolver-fik.github.io/GameVault/',
       source: 'https://github.com/Wolver-Fik/GameVault'
     },
@@ -99,7 +99,7 @@
       category: 'health',
       accent: '#60A5FA',
       icon: ICONS.sleeptrack,
-      tags: ['apps.sleeptrack.tag1', 'apps.sleeptrack.tag2', 'apps.sleeptrack.tag3'],
+      tags: ['apps.sleeptrack.tag1', 'apps.sleeptrack.tag2', 'apps.sleeptrack.tag3', 'apps.sleeptrack.tag4', 'apps.sleeptrack.tag5', 'apps.sleeptrack.tag6', 'apps.sleeptrack.tag7'],
       url: 'https://wolver-fik.github.io/SleepTrack/',
       source: 'https://github.com/Wolver-Fik/SleepTrack'
     },
@@ -109,7 +109,7 @@
       category: 'productivity',
       accent: '#2DD4BF',
       icon: ICONS.studyflow,
-      tags: ['apps.studyflow.tag1', 'apps.studyflow.tag2', 'apps.studyflow.tag3'],
+      tags: ['apps.studyflow.tag1', 'apps.studyflow.tag2', 'apps.studyflow.tag3', 'apps.studyflow.tag4', 'apps.studyflow.tag5', 'apps.studyflow.tag6'],
       url: 'https://wolver-fik.github.io/StudyFlow/',
       source: 'https://github.com/Wolver-Fik/StudyFlow'
     }

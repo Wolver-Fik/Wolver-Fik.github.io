@@ -24,6 +24,8 @@ The official hub for the Wolver-Fik Progressive Web Apps: a dark editorial comma
 - **Privacy by design** — no analytics, no external fonts, no backend. Language preference stays in `localStorage`.
 - **8 languages** — English, Spanish, Portuguese, French, Italian, German, Russian and Japanese, with automatic detection via `navigator.language`.
 - **Instant catalog** — live search with accent-insensitive matching plus four category filters.
+- **Refreshed app catalog** — all six cards surface the newest features through updated descriptions and searchable tags.
+- **Fresh offline build** — service worker cache bumped to `wf-suite-v1.0.2` so returning visitors get the latest catalog immediately.
 - **Mobile hardened** — `viewport-fit=cover`, safe-area insets for iPhone/Android and maskable icons.
 - **Portable** — every app in the suite imports and exports its data as JSON/CSV.
 
@@ -74,6 +76,8 @@ Centro de mando oficial de las Progressive Web Apps de Wolver-Fik: una interfaz 
 - **Privacidad por diseño** — sin analíticas, fuentes externas ni backend. El idioma se guarda en `localStorage`.
 - **8 idiomas** — inglés, español, portugués, francés, italiano, alemán, ruso y japonés, con detección automática vía `navigator.language`.
 - **Catálogo instantáneo** — búsqueda en vivo sin distinguir tildes y cuatro filtros por categoría.
+- **Catálogo actualizado** — las seis tarjetas muestran las funciones más recientes mediante descripciones y etiquetas buscables actualizadas.
+- **Compilación offline renovada** — caché del service worker actualizada a `wf-suite-v1.0.2` para que los visitantes recurrentes vean el catálogo al instante.
 - **Blindaje móvil** — `viewport-fit=cover`, `safe-area-inset` para iPhone/Android e iconos maskable.
 - **Portabilidad** — cada app de la suite importa y exporta sus datos en JSON/CSV.
 
