@@ -1,5 +1,5 @@
 /* Wolver-Fik Suite — service worker del portal hub. */
-const CACHE = 'wf-suite-v1.0.2';
+const CACHE = 'wf-suite-v1.0.4';
 
 const CORE_ASSETS = [
   './',

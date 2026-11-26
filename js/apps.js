@@ -109,7 +109,7 @@
       category: 'productivity',
       accent: '#2DD4BF',
       icon: ICONS.studyflow,
-      tags: ['apps.studyflow.tag1', 'apps.studyflow.tag2', 'apps.studyflow.tag3', 'apps.studyflow.tag4', 'apps.studyflow.tag5', 'apps.studyflow.tag6'],
+      tags: ['apps.studyflow.tag1', 'apps.studyflow.tag2', 'apps.studyflow.tag3', 'apps.studyflow.tag4', 'apps.studyflow.tag5', 'apps.studyflow.tag6', 'apps.studyflow.tag7'],
       url: 'https://wolver-fik.github.io/StudyFlow/',
       source: 'https://github.com/Wolver-Fik/StudyFlow'
     }
