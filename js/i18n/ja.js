@@ -1,11 +1,18 @@
 /* Wolver-Fik Suite — Japanese (ja) UI strings.
- * Todas las claves están alineadas con js/i18n/en.js (109 claves).
+ * Todas las claves están alineadas con js/i18n/en.js (116 claves).
  */
 (function (global) {
   'use strict';
 
   global.WF_I18N = global.WF_I18N || {};
   global.WF_I18N.ja = {
+    "install.button": "アプリをインストール",
+    "install.guideTitle": "iPhone または iPad にインストール",
+    "install.step1": "Safari のツールバーで「共有」アイコンをタップ",
+    "install.step2": "「ホーム画面に追加」を選択",
+    "install.close": "閉じる",
+    "install.buttonAria": "このデバイスにアプリをインストール",
+    "install.closeAria": "インストールガイドを閉じる",
     "meta.title": "Wolver-Fik Suite — オフラインファーストPWAエコシステム",
     "header.skip": "カタログへ移動",
     "header.language": "言語",

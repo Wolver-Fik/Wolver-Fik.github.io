@@ -1,11 +1,18 @@
 /* Wolver-Fik Suite — Russian (ru) UI strings.
- * Todas las claves están alineadas con js/i18n/en.js (109 claves).
+ * Todas las claves están alineadas con js/i18n/en.js (116 claves).
  */
 (function (global) {
   'use strict';
 
   global.WF_I18N = global.WF_I18N || {};
   global.WF_I18N.ru = {
+    "install.button": "Установить приложение",
+    "install.guideTitle": "Установка на iPhone или iPad",
+    "install.step1": "Нажмите значок «Поделиться» на панели Safari",
+    "install.step2": "Выберите «На главный экран»",
+    "install.close": "Закрыть",
+    "install.buttonAria": "Установить приложение на этом устройстве",
+    "install.closeAria": "Закрыть руководство по установке",
     "meta.title": "Wolver-Fik Suite — Экосистема PWA с офлайн-приоритетом",
     "header.skip": "Перейти к каталогу",
     "header.language": "Язык",

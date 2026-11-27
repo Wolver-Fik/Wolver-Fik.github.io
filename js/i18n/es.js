@@ -1,11 +1,18 @@
 /* Wolver-Fik Suite — Spanish (es) UI strings.
- * Todas las claves están alineadas con js/i18n/en.js (109 claves).
+ * Todas las claves están alineadas con js/i18n/en.js (116 claves).
  */
 (function (global) {
   'use strict';
 
   global.WF_I18N = global.WF_I18N || {};
   global.WF_I18N.es = {
+    "install.button": "Instalar app",
+    "install.guideTitle": "Instalar en iPhone o iPad",
+    "install.step1": "Toca el icono Compartir en la barra de Safari",
+    "install.step2": "Elige «Añadir a pantalla de inicio»",
+    "install.close": "Cerrar",
+    "install.buttonAria": "Instalar app en este dispositivo",
+    "install.closeAria": "Cerrar guía de instalación",
     "meta.title": "Wolver-Fik Suite — Ecosistema de PWAs offline-first",
     "header.skip": "Saltar al catálogo",
     "header.language": "Idioma",

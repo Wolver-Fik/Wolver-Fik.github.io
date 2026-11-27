@@ -1,11 +1,12 @@
 /* Wolver-Fik Suite — service worker del portal hub. */
-const CACHE = 'wf-suite-v1.2.0';
+const CACHE = 'wf-suite-v1.2.1';
 
 const CORE_ASSETS = [
   './',
   './index.html',
   './css/styles.css',
   './js/apps.js',
+  './js/ios-install.js',
   './js/app.js',
   './js/i18n/en.js',
   './js/i18n/es.js',
